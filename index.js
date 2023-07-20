@@ -4,7 +4,7 @@ const path = require('path');
 
 
 console.log(__dirname)
-const folderPath = path.join(__dirname, '/ZIVA'); // Specify the path to the parent folder
+const folderPath = path.join(__dirname, '/THISFOLDER'); // Specify the path to the parent folder
 if (!fs.existsSync(path.join(__dirname,'All_item'))) {
   fs.mkdirSync(path.join(__dirname,"ZIVA",'All_items'));
 }
@@ -31,7 +31,7 @@ let folders =fs.readdir(folderPath,(err,data)=>{
         
 
           // RENAMING FUNCTION 
-          fs.rename(oldPath,np2,(e)=>{
+          fs.rename(oldPath,newPath,(e)=>{
             if(e){
               console.log(e)
             }else{
